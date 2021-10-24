@@ -4,9 +4,7 @@ title:
 subtitle: |
     | (Neural Networks Implementation and Application Tutorial)
 author:
-- Vilém Zouhar, Noon L. S. Pokaratsiri Goldstein
-# I shortened your name because it didn't fit in the footer anymore
-# Feel free to edit it
+- Vilém Zouhar, Noon Pokaratsiri Goldstein
 theme:
 - Boadilla
 date: 28th November 2021
