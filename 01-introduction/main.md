@@ -133,7 +133,7 @@ no
 
 # Dates / Times
 
-- Lecture: Tuesdays 8:30-10:00
+- Lecture: Tuesdays 14:15-15:45
 - Tutorials:
   - Vilém: TBD
   - Noon: TBD
