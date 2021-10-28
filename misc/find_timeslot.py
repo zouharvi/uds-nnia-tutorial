@@ -8,15 +8,16 @@ Based on a version for SNLP https://github.com/zouharvi/uds-snlp-tutorial/blob/m
 
 import sys
 import csv
-from collections import defaultdict
+from collections import defaultdict, Counter
 import re
 import itertools
 
-slot_mapping = defaultdict(lambda:set())
+slot_mapping = defaultdict(lambda: set())
 student_slots = defaultdict(lambda: set())
 student_names = set()
 data_loss = defaultdict(lambda: [])
 header_times = {}
+
 
 def extract_names(header):
     header = header.split(",")[1:]
@@ -29,6 +30,7 @@ def extract_names(header):
 
     for i, date in enumerate(header_times_raw):
         header_times[i] = date
+
 
 # Input: cleaned exported csv file without the header (and without Vilém's vote which can't be removed)
 with open(sys.argv[1], 'r', newline='') as f:
@@ -43,10 +45,16 @@ with open(sys.argv[1], 'r', newline='') as f:
                 student_slots[slot_i].add(name)
         student_names.add(name)
 
+# duplicates seem to be self-resolved
+# duplicates = [item for item, count in Counter(header_times.values()).items() if count > 1]
+# for duplicate in duplicates:
+#     duplicate_ids = [k for k,v in header_times.items() if v == duplicate]
+#     print(duplicate_ids)
+
 # flatten slot mapping
 slot_mapping = [
-    {(k,x) for x in v} 
-    for k,v in slot_mapping.items()
+    {(k, x) for x in v}
+    for k, v in slot_mapping.items()
 ]
 
 # simply try all the combinations
@@ -56,11 +64,13 @@ for slot_ids in itertools.product(*slot_mapping):
         covered_students = covered_students.union(student_slots[slot_id])
 
     loss = len(student_names) - len(covered_students)
-    data_loss[loss].append({"loss": loss, **{k:v for k,v in slot_ids}})
+    data_loss[loss].append({"loss": loss, **{k: v for k, v in slot_ids}})
+
+print("Total students:", len(student_names), "\n")
 
 # print all configurations with minimal loss (number of student not covered)
-for loss_i, loss in enumerate(sorted(list(data_loss.keys()), reverse=True)[-2:]):
-    print("Option", chr(loss_i+ord("A")))
+for loss_i, loss in enumerate(sorted(list(data_loss.keys()))[:2]):
+    print("Option", chr(loss_i + ord("A")))
     for config in data_loss[loss]:
         print("Students without a tutorial:", config.pop("loss"))
         for name, slot_id in config.items():
