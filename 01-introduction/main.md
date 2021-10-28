@@ -42,6 +42,7 @@ Choose and answer at least two questions:
 - On scale from 1-10 how proficient are you in programming and mathematics?
 - What topics of Neural Networks excite you the most?
 - What topics of Neural Networks excite you the least?
+- What programming languages do you know?
 - TODO
 
 <!--
@@ -75,9 +76,6 @@ from SNLP
 - 1pt for answering a question  in a tutorial
 - TODO pt for fixing errors in tutorial presentations
   - [github.com/zouharvi/uds-nnia-tutorial](https://github.com/zouharvi/uds-nnia-tutorial)
-- Presenting a solution to the assignment (~5 points)
-  - Let individual tutors known if you wish to present (in the respective tutor's channel)
-  - Everyone can present _at most_ once
 :::
 
 \vspace{-0.5cm}
@@ -85,13 +83,13 @@ from SNLP
 ::: columns
 :::: column
 ## Final Project
-- TBD
+- None
 ::::
 
 :::: column
 ## Transfer from last year
 - Possible
-- Do project and exam
+- Assignments recommended (because of the exam)
 ::::
 :::
 
@@ -141,7 +139,6 @@ no
   - Released (usually) TBD (available in Teams)
   - Deadline (next) TBD (submit in Teams)
 - Exam: TBD
-- Project Deadline: TBD
 
 # Tutorial Content
 
