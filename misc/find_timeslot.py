@@ -40,6 +40,9 @@ with open(sys.argv[1], 'r', newline='') as f:
 
         name = line[0]
         slots = ["OK" in x for x in line[1:]]
+        # if sum(slots) < 3:
+        #     print("Disregarding")
+        #     continue
         for slot_i, slot in enumerate(slots):
             if slot:
                 student_slots[slot_i].add(name)
@@ -64,15 +67,16 @@ for slot_ids in itertools.product(*slot_mapping):
         covered_students = covered_students.union(student_slots[slot_id])
 
     loss = len(student_names) - len(covered_students)
-    data_loss[loss].append({"loss": loss, **{k: v for k, v in slot_ids}})
+    data_loss[loss].append({k: v for k, v in slot_ids})
 
 print("Total students:", len(student_names), "\n")
 
 # print all configurations with minimal loss (number of student not covered)
 for loss_i, loss in enumerate(sorted(list(data_loss.keys()))[:2]):
     print("Option", chr(loss_i + ord("A")))
+    print("Students without a tutorial:", loss)
     for config in data_loss[loss]:
-        print("Students without a tutorial:", config.pop("loss"))
+        print("-")
         for name, slot_id in config.items():
-            print(f"{name+':':>9}", header_times[slot_id])
+            print(f"{name+f' ({len(student_slots[slot_id])})'+':':>14}", header_times[slot_id].replace(" -", "-").replace("- ", "-"))
     print()
