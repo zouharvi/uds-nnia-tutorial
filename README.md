@@ -15,7 +15,8 @@ Compile slides using pandoc and the provided script (handout includes notes and 
 - Handout version: `./build.sh machine-translation handout`
 - Both: `./build.sh machine-translation`
 
-Make sure you have `pandoc` and `texlive` installed.
+Make sure you have `pandoc` and `texlive` installed. (For Anaconda users, try compiling outside an environment
+if you encounter texlive-related issues.)  
 You don't need to build the presentations if you want to contribute - editing the markdown is enough.
 If you still wish to compile them (great!) and encounter technical issues, contact me.
 
