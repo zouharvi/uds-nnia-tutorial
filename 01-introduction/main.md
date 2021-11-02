@@ -43,7 +43,7 @@ Choose and answer at least two questions:
 - What topics of Neural Networks excite you the most?
 - What topics of Neural Networks excite you the least?
 - What programming languages do you know?
-- TODO
+- How best can the tutotial sessions be helpful to your needs?
 
 <!--
 from SNLP
@@ -133,11 +133,11 @@ no
 
 - Lecture: Tuesdays 14:15-15:45
 - Tutorials:
-  - Vilém: TBD
-  - Noon: TBD
+  - Vilém: Wednesday 16:00-18:00
+  - Noon: Thursday 08:30-10:00
 - Assignments
-  - Released (usually) TBD (available in Teams)
-  - Deadline (next) TBD (submit in Teams)
+  - Released (usually) by Wednesday 08:30 (available in Teams)
+  - Deadline (next) by Wednesday 08:30 (submit in Teams)
 - Exam: TBD
 
 # Tutorial Content
@@ -148,19 +148,76 @@ no
 
 # Current Homework
 
-- TBD
+- Assignment 1
+- Previous assignment to review:
+	- Assignment 0
 
 # Linear Algebra Basics
 
-TODO
+Let's go over the definitions and some examples of these terms:
+
+- Scalars
+- Vectors
+- Matrices
+- Tensors
+
+# Linear Algebra Basics
+
+::: frame
+## Some operations and properties involving matrices:
+
+- transpose
+- inverse
+- dot product (i.e. matrix multiplication)
+:::
+
+# Linear Algebra  Basics
+
+\centering
+Review: matrix multiplication or dot production
+
+$C = AB$
+
+$C_{i,j} = \sum_{k} A_{i,k}B_{k,j}$
+
+# Linear Algebra Basics
+
+::: frame
+## Common Properties:
+
+
+- $A(B+C) = AB + AC$
+- $A(BC) = (AB)C$
+- $AB \neq BA$
+- $(AB)^T = B^TA^T$
+:::
+
+# Linear Algebra Basics
+
+::: frame
+## True or False?
+- Every real matrix has an eigenvalue decomposition.
+- Every real matrix has a singular value decomposition.
+- Any real symmetric matrix has an eigenvalue decomposition.
+:::
+
+TODO: examples/definitions for the following 
+
+Definitions:
+
+- eigenvector
+- eigenvalue
+- eigendecomposition
+- singular value decomposition (SVD)
+
 
 # Numpy Basics
 
-TODO
+TODO (Examples in Jupyter Notebook?)
 
 # Resources
 
 1. Course Website: [lsv.uni-saarland.de/neural-networks-implementation-and-application-winter-2021-2022-2](https://www.lsv.uni-saarland.de/neural-networks-implementation-and-application-winter-2021-2022-2/)
-2. Piazza: <https://piazza.com/> (TODO)
+2. Piazza: <https://piazza.com/class/kvc3vzhsvh55rt> 
 3. Tutorial repository [github.com/zouharvi/uds-nnia-tutorial](https://github.com/zouharvi/uds-nnia-tutorial)
 4. Lecture & tutorial teams channels
