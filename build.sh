@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function compile {
-    echo "Compiling $1 $3"
+    echo "Compiling $1$3"
     cd $1 &&
     pandoc main.md -t beamer -o $3 -V "classoption=$2" && 
     cd ..

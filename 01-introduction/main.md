@@ -74,7 +74,7 @@ from SNLP
 ## Tutorial Bonus Points
 - ~2pts for extra exercises in the assignments
 - 1pt for answering a question  in a tutorial
-- TODO pt for fixing errors in tutorial presentations
+- ??pt for fixing errors in tutorial presentations
   - [github.com/zouharvi/uds-nnia-tutorial](https://github.com/zouharvi/uds-nnia-tutorial)
 :::
 
@@ -88,7 +88,7 @@ from SNLP
 
 :::: column
 ## Transfer from last year
-- Possible
+- Maybe possible (tbd)
 - Assignments recommended (because of the exam)
 ::::
 :::
@@ -102,7 +102,7 @@ from SNLP
   - Only in specific cases
   - By default **no** email and **no** personal chat
   - Ask questions during the lecture / tutorials
-- Public forum (please use Piazza) (link TODO)
+- Public forum (please use [Piazza](https://piazza.com/class/kvc3vzhsvh55rt))
   - Ask questions
   - Other students will also benefit from the answers
   - You can answer someone else's issue
@@ -136,8 +136,8 @@ no
   - Vilém: Wednesday 16:00-18:00
   - Noon: Thursday 08:30-10:00
 - Assignments
-  - Released (usually) by Wednesday 08:30 (available in Teams)
-  - Deadline (next) by Wednesday 08:30 (submit in Teams)
+  - Released (usually) by Wednesday 08:00 (available in Teams)
+  - Deadline (next) by Wednesday 08:00 (submit in Teams)
 - Exam: TBD
 
 # Tutorial Content
