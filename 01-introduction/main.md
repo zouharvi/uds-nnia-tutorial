@@ -16,10 +16,8 @@ header-includes:
 # Overview 
 
 - Introduction
-- Requirements
-- Materials
-- Assignments
-- TODO (lecture content)
+- Requirements, Materials, Assignments
+- PCA, SVD
 - Current assignment
 - QA
 
@@ -131,7 +129,8 @@ no
 
 # Dates / Times
 
-- Lecture: Tuesdays 14:15-15:45
+- Lecture:
+  - Tuesday 14:15-15:45
 - Tutorials:
   - Vilém: Wednesday 16:00-18:00
   - Noon: Thursday 08:30-10:00
@@ -146,11 +145,11 @@ no
 - Presentation of the past assignment
 - Discussing doubts in current assignment
 
-# Current Homework
+# Assignment 0
 
-- Assignment 1
-- Previous assignment to review:
-	- Assignment 0
+- Questions?
+- Did it work?
+- How long did it take?
 
 # Linear Algebra Basics
 
@@ -210,10 +209,15 @@ Definitions:
 - eigendecomposition
 - singular value decomposition (SVD)
 
-
 # Numpy Basics
 
+<!-- vz: I usually don't do any coding in the tutorial. -->
+
 TODO (Examples in Jupyter Notebook?)
+
+# Assignment 1
+
+- Any questions?
 
 # Resources
 
