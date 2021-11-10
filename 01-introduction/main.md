@@ -143,7 +143,13 @@ no
 
 - Review of the topics covered in class
 - Presentation of the past assignment
-- Discussing doubts in current assignment
+- Discussing current assignment
+
+# Organization
+
+\centering
+
+Questions?
 
 # Assignment 0
 
@@ -153,37 +159,37 @@ no
 
 # Linear Algebra Basics
 
-Let's go over the definitions and some examples of these terms:
+Few definitions (+how are they implemented in Python/Numpy/PyTorch)
 
 - Scalars
 - Vectors
 - Matrices
 - Tensors
 
+. . .
+
+Identify the following objects (Python lists):
+
+- `[5.0, 3.0]`
+- `5.0`
+- `[True]`
+- `[[5, 1], [0, 4]]`
+- `[[True, False], [False, True]]`
+- `[ [[0,1], [0,1], [0,1]], [[0,1], [0,1], [0,1]] ]`
+
 # Linear Algebra Basics
 
 ::: frame
-## Some operations and properties involving matrices:
+## A few operations and properties involving matrices:
 
-- transpose
-- inverse
-- dot product (i.e. matrix multiplication)
+- Transpose
+- Inverse
+- Dot product (i.e. matrix multiplication)
+  - $C=AB, C_{i,j} = \sum_{k} A_{i,k}B_{k,j}$
 :::
-
-# Linear Algebra  Basics
-
-\centering
-Review: matrix multiplication or dot production
-
-$C = AB$
-
-$C_{i,j} = \sum_{k} A_{i,k}B_{k,j}$
-
-# Linear Algebra Basics
 
 ::: frame
 ## Common Properties:
-
 
 - $A(B+C) = AB + AC$
 - $A(BC) = (AB)C$
@@ -194,30 +200,91 @@ $C_{i,j} = \sum_{k} A_{i,k}B_{k,j}$
 # Linear Algebra Basics
 
 ::: frame
-## True or False?
-- Every real matrix has an eigenvalue decomposition.
-- Every real matrix has a singular value decomposition.
-- Any real symmetric matrix has an eigenvalue decomposition.
+## True or False? ![](img/thinking_face.png){width=15px}
+- Every real matrix has an eigenvalue decomposition (in $\mathbb{R}$).
+<!-- No, non-square matricies don't. -->
+- Every real matrix has a singular value decomposition (in $\mathbb{R}$).
+<!-- Yes. -->
+- Every real symmetric matrix has an eigenvalue decomposition (in $\mathbb{R}$).
+<!-- Yes. -->
 :::
-
-TODO: examples/definitions for the following 
 
 Definitions:
 
-- eigenvector
-- eigenvalue
-- eigendecomposition
-- singular value decomposition (SVD)
+> - Eigenvector, Eigenvalue
+>   - $Av = \lambda v, v\neq \overrightarrow{0}$
+> - Eigendecomposition
+>   - $A = Q \cdot L \cdot Q^{-1}$
+> - Singular value decomposition (SVD)
+>   - $A = U \Sigma V^T$
 
-# Numpy Basics
+# Linear Algebra Basics - True or False? ![](img/monocle_face.png){width=15px}
 
-<!-- vz: I usually don't do any coding in the tutorial. -->
+\qquad $A = \begin{pmatrix} 4 & 2 \\ 2 & 4 \end{pmatrix}$
 
-TODO (Examples in Jupyter Notebook?)
+1. Is $v_1 = (1, -1)$ an eigenvector of $A$?
+2. Is $v_2 = (2, 1)$ an eigenvector of $A$?
+3. Is $v_3 = (2, 2)$ an eigenvector of $A$?
+
+# PCA
+
+::: {}
+
+\centering
+![](img/weight_height.png){width=40%}
+
+:::
+
+## Questions ![](img/monocle_face.png){width=15px}
+> - What will be the first principal component?
+> - Does anyone know how PCA works?
+> - What does it mean that we take only $k$ largest principal components?
+
+<!-- 
+```
+1.   standardize data = raw data - mean / standard deviation of data
+2.   M = covariant_matrix(standardize data)
+3.   eigenvalues, eigenvectors = eig(M)
+4.   feature_vector = select_n_highest_components(eigenvectors)
+5.   projected data = standardized_data dot feature_vector
+```
+-->
+
+# PCA
+
+- Is it safe to say that the first component will always contain the most important information? ![](img/thinking_face.png){width=15px}
+
+. . .
+
+::: columns
+:::: column
+![](img/pca_1.png)
+::::
+
+:::: column
+![](img/pca_7.png)
+::::
+:::
+
+# Standardization
+
+- Is not normalization! ($x' = \frac{x}{|x|}$)
+- $X = \frac{X - \text{mean}(X)}{\text{std}(X)}$
+- Compute either:
+  - With Numpy: `X = (X-X.mean())/np.std(X)`
+  - With Scikit: `StandardScaler().fit_transform(X)`
+
+- Why do we need standardization for PCA? ![](img/thinking_face.png){width=15px}
 
 # Assignment 1
 
 - Any questions?
+
+# Typesetting Tips
+
+- Do **not** write $A*B$, use `\cdot` or `\times`: $A\cdot B, A \times B$.
+- Use LaTeX functions when available, e.g. `\log, \sin`: $\log(x), \sin(x)$, **not** $log(x), sin(x)$.
+- Do **not** write plain text in math mode, use `$\text{ComputeEigenvalues}(X)$`
 
 # Resources
 
