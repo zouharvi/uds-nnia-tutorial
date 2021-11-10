@@ -35,13 +35,17 @@ header-includes:
 
 # Introduction
 
-Choose and answer at least two questions:
+## Choose and answer at least two questions:
 
 - On scale from 1-10 how proficient are you in programming and mathematics?
 - What topics of Neural Networks excite you the most?
 - What topics of Neural Networks excite you the least?
 - What programming languages do you know?
 - How best can the tutotial sessions be helpful to your needs?
+
+## Also the following:
+- Who is your groupmate?
+- Will you be attending Vilém's or Noon's tutorials?
 
 <!--
 from SNLP
@@ -157,6 +161,11 @@ Questions?
 - Did it work?
 - How long did it take?
 
+## Feedback:
+- Change \textcolor{red}{TODO} to \textcolor{green}{Solution}.
+- Don't forget to write amount of work.
+  - Useful for our estimates of difficulty.
+
 # Linear Algebra Basics
 
 Few definitions (+how are they implemented in Python/Numpy/PyTorch)
@@ -199,7 +208,30 @@ Identify the following objects (Python lists):
 
 # Linear Algebra Basics
 
-::: frame
+
+## Definitions:
+
+:: columns
+::: column
+> - Eigenvector, Eigenvalue
+>   - $Av = \lambda v, v\neq \overrightarrow{0}$
+> - Eigendecomposition
+>   - $A = Q \cdot L \cdot Q^{-1}$
+> - Singular value decomposition (SVD)
+>   - $A = U \Sigma V^T$
+> - Principal Component Analysis:
+>   - Eigendecomposition or SVD of covariance matrix $W=\frac{A^TA}{n-1}$
+<!-- Possible with eigendecomposition becauset A^TA is symmetric rectangular -->
+>   - Assume ordering of \{eigen,singular\}values from highest to lowest
+>   - Project to $k$ dimensions: $A_k = A Q_k$
+:::
+::: column
+> - Eigenvalue decomposition
+> - Singular value decomposition
+> - PCA
+:::
+::
+
 ## True or False? ![](img/thinking_face.png){width=15px}
 - Every real matrix has an eigenvalue decomposition (in $\mathbb{R}$).
 <!-- No, non-square matricies don't. -->
@@ -207,16 +239,6 @@ Identify the following objects (Python lists):
 <!-- Yes. -->
 - Every real symmetric matrix has an eigenvalue decomposition (in $\mathbb{R}$).
 <!-- Yes. -->
-:::
-
-Definitions:
-
-> - Eigenvector, Eigenvalue
->   - $Av = \lambda v, v\neq \overrightarrow{0}$
-> - Eigendecomposition
->   - $A = Q \cdot L \cdot Q^{-1}$
-> - Singular value decomposition (SVD)
->   - $A = U \Sigma V^T$
 
 # Linear Algebra Basics - True or False? ![](img/monocle_face.png){width=15px}
 
