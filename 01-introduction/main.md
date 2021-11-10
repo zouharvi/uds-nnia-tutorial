@@ -211,8 +211,6 @@ Identify the following objects (Python lists):
 
 ## Definitions:
 
-:: columns
-::: column
 > - Eigenvector, Eigenvalue
 >   - $Av = \lambda v, v\neq \overrightarrow{0}$
 > - Eigendecomposition
@@ -224,13 +222,6 @@ Identify the following objects (Python lists):
 <!-- Possible with eigendecomposition becauset A^TA is symmetric rectangular -->
 >   - Assume ordering of \{eigen,singular\}values from highest to lowest
 >   - Project to $k$ dimensions: $A_k = A Q_k$
-:::
-::: column
-> - Eigenvalue decomposition
-> - Singular value decomposition
-> - PCA
-:::
-::
 
 ## True or False? ![](img/thinking_face.png){width=15px}
 - Every real matrix has an eigenvalue decomposition (in $\mathbb{R}$).
