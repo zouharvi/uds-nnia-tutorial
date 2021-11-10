@@ -7,7 +7,7 @@ author:
 - Vilém Zouhar, Noon Pokaratsiri Goldstein
 theme:
 - Boadilla
-date: 28th November 2021
+date: 10th November 2021
 aspectratio: 169
 header-includes:
   - \AtBeginDocument{}
@@ -41,7 +41,7 @@ header-includes:
 - What topics of Neural Networks excite you the most?
 - What topics of Neural Networks excite you the least?
 - What programming languages do you know?
-- How best can the tutotial sessions be helpful to your needs?
+- How best can the tutorial sessions be helpful to your needs?
 
 ## Also the following:
 - Who is your groupmate?
@@ -147,7 +147,7 @@ no
 
 - Review of the topics covered in class
 - Presentation of the past assignment
-- Discussing current assignment
+- Discussing the current assignment
 
 # Organization
 
