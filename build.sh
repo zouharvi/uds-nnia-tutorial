@@ -3,7 +3,7 @@
 function compile {
     echo "Compiling $1$3"
     cd $1 &&
-    pandoc main.md -t beamer -o $3 -V "classoption=$2" && 
+    pandoc main.md --from markdown+latex_macros -t beamer -o $3 -V "classoption=$2" && 
     cd ..
 }
 
