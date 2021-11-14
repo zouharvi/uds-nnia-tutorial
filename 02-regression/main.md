@@ -39,8 +39,27 @@ header-includes:
 
 # Regression
 
-- What is the difference between classification and regression? \monocle
-- 
+> - What is the difference between classification and regression? \monocle
+> - What is regression in terms of functions? \monocle
+>   - Any function $f: F \rightarrow \mathbb{R}$ (from joint feature space to numbers)
+> - What is _linear_ regression? \monocle
+>   - $\hat{y} = x^T \cdot \theta + C$ (parameters $\theta, C$)
+
+. . .
+
+## Which of the following are regression (and linear/polynomial) models? \monocle
+1. 5
+2. $4\cdot x_1 + 5$
+3. $4\cdot x_1 + 3\cdot x_2^2 + 5$
+4. $4\cdot x_1 + 3\cdot x_1\cdot x_2 + 5$
+5. $4\cdot x_1 + 3\cdot \sin(x_2^2) + 5$
+<!-- escaping newlines is an ugly hack to be able to use $ (to align left) -->
+6. $\begin{cases} \
+      4\cdot x_1 + 5 \quad &\text{if} \, x_2 \ge 10 \\ \
+      3\cdot x_1 + 4 \quad &\text{if} \, x_2 < 10 \
+    \end{cases}$
+
+# Regression
 
 ## Regression to Classification \think \think
 Assume that we have a function that outputs a score for every class, e.g. \emph{Predict sentiment into (positive, negative, neutral)}:
