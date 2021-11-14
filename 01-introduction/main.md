@@ -1,6 +1,6 @@
 ---
 title:
-- Introduction
+- Introduction, PCA, SVD + Assignment 0
 subtitle: |
     | (Neural Networks Implementation and Application Tutorial)
 author:

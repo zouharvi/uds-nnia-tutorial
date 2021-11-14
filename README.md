@@ -5,7 +5,8 @@ Slides for Neural Networks Implementation and Application tutorials of Winter 20
 ## Outline
 
 Schedule (links provided only to semi-finished materials):
-- [Introduction](01-introduction/handout.pdf)
+- [Introduction + Assignment 0](01-introduction/handout.pdf)
+- [Regression + Assignment 1](02-regression/handout.pdf)
 - TODO
 
 ## Contributing
