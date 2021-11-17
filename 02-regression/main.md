@@ -19,20 +19,24 @@ header-includes:
 
 # Overview 
 
-
 - Assignment 1
 - Regression
 - Assignment 2
+
+# Update
+
+\centering
+
+Up to 2 points for participation.
 
 # Assignment 1
 
 ##  Organization
 - Late submissions (>10mins) will not be accepted unless previously agreed upon
 - Other questions?
-- How long did it take?
 
 ## Notes
-- Very nice solutions! (average TODO)
+- Very nice solutions!
 - Reconstruction error on original space, not standardized (we did the same mistake \upside )
 
 # Assignment 1
@@ -83,6 +87,7 @@ $$
 > - Why $L_2$ and not $L_1$?
 >   - We care about points that are drastially mispredicted, e.g. $L_2(-1, 10)$ and not about almost correctly predicted instances $L_2(-1, -1.1)$ 
 >   - In $L_1$, these would have the same weight (gradient)
+>   - $L_1$ leads to some parameters being 0 (sometimes a good thing)
 
 ## Regularization
 > - Why do we want to regularize?
@@ -109,6 +114,6 @@ $$
 
 - Any questions?
 
-# Resources
+<!-- # Resources
 
-TODO
+TODO -->

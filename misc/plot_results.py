@@ -14,6 +14,8 @@ x_ticks = list(range(len(data)))
 ax1 = plt.gca()
 ax2 = ax1.twinx()
 ax1.set_xlim(0-1, len(data))
+ax1.set_xticks(x_ticks)
+ax1.set_xticklabels(x_ticks)
 
 # assignment points
 h1 = ax1.plot(
@@ -45,7 +47,9 @@ ax1.set_xlabel("Students")
 plt.legend(
     [h1, h2, hT],
     [h1.get_label(), h2.get_label(), hT.get_label()],
-    loc="center right",
-    )
+    loc="center",
+    ncol=3,
+    bbox_to_anchor=(0,0.55,1,1,),
+)
 plt.tight_layout()
 plt.show()
