@@ -14,6 +14,7 @@ header-includes:
   - \graphicspath{ {./img/} }
   - \newcommand{\think}{\includegraphics[width=0.4cm]{thinking_face.png}}
   - \newcommand{\monocle}{\includegraphics[width=0.4cm]{monocle_face.png}}
+  - \newcommand{\upside}{\includegraphics[width=0.4cm]{upside_down_face.png}}
 ---
 
 # Overview 
@@ -25,12 +26,16 @@ header-includes:
 
 # Assignment 1
 
-::: frame
 ##  Organization
 - Late submissions (>10mins) will not be accepted unless previously agreed upon
 - Other questions?
 - How long did it take?
-:::
+
+## Notes
+- Very nice solutions! (average TODO)
+- Reconstruction error on original space, not standardized (we did the same mistake \upside )
+
+# Assignment 1
 
 - \emph{Tutor cue:} go through the assignment
 - Questions?
