@@ -1,6 +1,6 @@
 ---
 title:
-- Regression + Assignment 1
+- Regression + Assignments 1, 2
 subtitle: |
     | (Neural Networks Implementation and Application Tutorial)
 author:
