@@ -15,6 +15,8 @@ header-includes:
   - \newcommand{\think}{\includegraphics[width=0.4cm]{thinking_face.png}}
   - \newcommand{\monocle}{\includegraphics[width=0.4cm]{monocle_face.png}}
   - \newcommand{\upside}{\includegraphics[width=0.4cm]{upside_down_face.png}}
+  - \newcommand{\tired}{\includegraphics[width=0.4cm]{tired_face.png}}
+  - \newcommand{\starstruck}{\includegraphics[width=0.4cm]{starstruck_face.png}}
 ---
 
 # Overview 
@@ -70,7 +72,39 @@ TODO
 
 # Autograd & PyTorch
 
-TODO
+## How to get the gradient at $(x,y) = (2,3)$ of $x\cdot y + \sin(\pi \cdot x)$?
+> - By hand \tired
+> - Autograd \starstruck
+
+. . .
+
+
+::: columns
+:::: {.column width=35%}
+## By hand
+\begin{align*}
+& \frac{\delta}{\delta x} = y + \pi \cdot \cos(\pi \cdot x) \rightarrow 3 + \pi \\
+& \frac{\delta}{\delta y} = x \rightarrow 2 \\
+& \nabla f (2,3) \rightarrow (3+\pi, 2)
+\end{align*}
+::::
+
+. . .
+
+:::: {.column width=60%}
+## Autograd
+```
+import torch
+import numpy as np
+x = torch.tensor(2.0, requires_grad=True)
+y = torch.tensor(3.0, requires_grad=True)
+out = x*y + torch.sin(np.pi*x)
+out.backward() # trigger gradient computation
+assert np.isclose(x.grad, 3+np.pi)
+assert np.isclose(y.grad, 2)
+```
+::::
+:::
 
 # Assignment 3
 
