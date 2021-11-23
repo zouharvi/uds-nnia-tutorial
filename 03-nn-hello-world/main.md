@@ -29,7 +29,10 @@ header-includes:
 
 # Assignment 2
 
-TODO
+- *Tutor cue:* go through the assignment
+- What were the biggest issues? Coding or theory?
+- Do you feel they are too easy/hard?
+- Do you feel they are unrelated to the lecture content?
 
 # Optimization
 
