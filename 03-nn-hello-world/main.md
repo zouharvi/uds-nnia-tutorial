@@ -21,15 +21,29 @@ header-includes:
 
 # Overview 
 
+- Organization - Bonus points
 - Assignment 2
 - Gradient
 - PyTorch's Autograd
 - NN Hello World
 - Assignment 3
 
+# Organization - Bonus points
+
+- 2 points for solution presentation
+- 1-2 points for session contribution
+- Max 2 points per session
+
 # Assignment 2
 
 - *Tutor cue:* go through the assignment
+- Typesetting:
+  - $test accuracy = 0.5$ or $\text{test accuracy} = 0.5$?
+    - `$\text{test accuracy} = 0.5$`
+  - The `*` symbol is used for convolution. Use `\cdot` instead.
+    - $a * b$, $a\cdot b$
+- Cheating
+  - Discussion vs. blatant copying
 - What were the biggest issues? Coding or theory?
 - Do you feel they are too easy/hard?
 - Do you feel they are unrelated to the lecture content?
