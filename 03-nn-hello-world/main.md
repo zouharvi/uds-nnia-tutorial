@@ -80,8 +80,6 @@ header-includes:
 > - Will we always find the global minimum?
 ::::
 
-. . .
-
 :::: column
 ![Function parameter landscape from [2]](img/landscape_2d.png){width=100%}
 ::::
