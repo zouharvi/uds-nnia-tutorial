@@ -15,6 +15,8 @@ header-includes:
   - \newcommand{\think}{\includegraphics[width=0.4cm]{thinking_face.png}}
   - \newcommand{\monocle}{\includegraphics[width=0.4cm]{monocle_face.png}}
   - \newcommand{\upside}{\includegraphics[width=0.4cm]{upside_down_face.png}}
+  - \newcommand{\tired}{\includegraphics[width=0.4cm]{tired_face.png}}
+  - \newcommand{\starstruck}{\includegraphics[width=0.4cm]{starstruck_face.png}}
 ---
 
 # Overview 
