@@ -8,6 +8,7 @@ Schedule (links provided only to semi-finished materials):
 - [Introduction + Assignment 0](01-introduction/handout.pdf)
 - [Regression + Assignment 1,2](02-regression/handout.pdf)
 - [Neural Networks Hello World + Assignment 2,3](03-nn-hello-world/handout.pdf)
+- [Optimization + Assignment 3,4](04-optimization/handout.pdf)
 - TODO
 
 ## Contributing
