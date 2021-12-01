@@ -28,7 +28,8 @@ header-includes:
 
 # Assignment 3
 
-TODO
+- Points for presentation \starstruck
+- What was the hardest part?
 
 # Hessian and Jacobian
 
