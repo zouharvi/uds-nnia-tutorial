@@ -21,9 +21,16 @@ header-includes:
 
 # Overview 
 
+- Feedback
 - Assignment 4
 - Backpropagation
 - Assignment 5
+
+# Feedback
+
+- What do you like the least about this course?
+- What works well in this course?
+- What would you change?
 
 # Assignment 4
 
