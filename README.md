@@ -9,6 +9,8 @@ Schedule (links provided only to semi-finished materials):
 - [Regression + Assignment 1,2](02-regression/handout.pdf)
 - [Neural Networks Hello World + Assignment 2,3](03-nn-hello-world/handout.pdf)
 - [Optimization + Assignment 3,4](04-optimization/handout.pdf)
+- [Backpropagation + Assignment 4,5](05-backpropagation/handout.pdf)
+- [Regularization + Assignment 5,6](06-regularization/handout.pdf)
 - TODO
 
 ## Contributing
