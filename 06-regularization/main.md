@@ -30,8 +30,19 @@ header-includes:
 
 # Assignment 5
 
-- Who wants to present their solution?
+::: frame
+## Tips
+- Start early
+- Ask questions on Piazza
+  - We try to be very active there and lead you to solutions
+:::
+
+- What went wrong?
 - What was the hardest part?
+
+. . .
+
+- Who wants to present their solution?
 - Any questions?
 
 # Regulariza7tion
