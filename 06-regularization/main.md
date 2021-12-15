@@ -7,7 +7,7 @@ author:
 - Vilém Zouhar, Noon Pokaratsiri Goldstein
 theme:
 - Boadilla
-date: 15th, 14th December 2021
+date: 15th, 16th December 2021
 aspectratio: 169
 header-includes:
   - \usepackage{graphicx}
