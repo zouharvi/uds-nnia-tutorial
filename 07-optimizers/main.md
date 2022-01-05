@@ -121,7 +121,9 @@ header-includes:
 - Be able to write down pseudocode for the optimizers (in more detail than these slides)
 :::
 
-![Comparison of optimizers [3]](optimizer_comparison.png){width=400px}
+![Comparison of optimizers [3]](optimizer_comparison.png){width=350px}
+
+See [nice animated gradient optimizer visualizations](https://github.com/Jaewan-Yun/optimizer-visualization).
 
 # Assignment 7
 
@@ -132,3 +134,4 @@ Any questions?
 1. [dragonnotes.org/DeepLearning/Optimization](https://dragonnotes.org/DeepLearning/Optimization) (very good notes!)
 2. [mlfromscratch.com/optimizers-explained/#/](https://mlfromscratch.com/optimizers-explained/#/)
 3. [towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c](https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c)
+4. [gradient visualization](https://github.com/Jaewan-Yun/optimizer-visualization)
