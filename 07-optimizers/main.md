@@ -75,7 +75,7 @@ header-includes:
 
 ## SGD/MBGD/BGD (known as SGD)
 - Approximate gradient based on some set
-- $\theta \leftarrow \theta + g$
+- $\theta \leftarrow \theta - g$
 
 . . .
 
@@ -95,14 +95,14 @@ header-includes:
 
 ## AdaGrad
 - Keep sum of squared gradients ("speed"): $r \leftarrow r + g \odot g$
-- Scale individual dimensions: $\theta \leftarrow \frac{\epsilon}{\delta + \sqrt{r}} \odot g$
+- Scale individual dimensions: $\theta \leftarrow \theta - \frac{\epsilon}{\delta + \sqrt{r}} \odot g$
 
 . . .
 
 ## RMSProp
 - Same as AdaGrad but decay history
 - Keep sum of squared gradients ("speed"): $r \leftarrow \rho r + (1-\rho) g \odot g$
-- Scale individual dimensions: $\theta \leftarrow \frac{\epsilon}{\delta + \sqrt{r}} \odot g$
+- Scale individual dimensions: $\theta \leftarrow \theta - \frac{\epsilon}{\delta + \sqrt{r}} \odot g$
 
 . . .
 
@@ -110,7 +110,7 @@ header-includes:
 - Combine momentum and adaptive learning rates
 - $s \leftarrow \rho_1 s + (1-\rho_1) g, r \leftarrow \rho_2 r + (1-\rho_2) g\odot g$
 - Bias correction (matters only at the beginning): $\hat{s} = s/(1-\rho_1^t), \hat{r} = r/(1-\rho_2^t)$
-- Update: $\theta \leftarrow \frac{\epsilon}{\delta+\sqrt{\hat{r}}}\hat{s}$
+- Update: $\theta \leftarrow \theta - \frac{\epsilon}{\delta+\sqrt{\hat{r}}}\hat{s}$
 
 # Optimization Algorithms
 
