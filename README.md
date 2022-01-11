@@ -11,6 +11,9 @@ Schedule (links provided only to semi-finished materials):
 - [Optimization + Assignment 3,4](04-optimization/handout.pdf)
 - [Backpropagation + Assignment 4,5](05-backpropagation/handout.pdf)
 - [Regularization + Assignment 5,6](06-regularization/handout.pdf)
+- [Optimizers + Assignment 6,7](07-optimizers/handout.pdf)
+- [CNN + Assignment 7,8](08-cnn/handout.pdf)
+- [Methodology, Representation + Assignment 8,9](10-misc/handout.pdf)
 - TODO
 
 ## Contributing
