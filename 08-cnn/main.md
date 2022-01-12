@@ -25,7 +25,7 @@ header-includes:
 - Content
 - Assignment 8
 
-# Assignment 8
+# Assignment 7
 
 - What was the hardest part?
 
@@ -66,7 +66,7 @@ fc3   | 4096 $\cdot$ 1000 | 1000
 ::::
 :::
 
-# Assignment 9
+# Assignment 8
 
 Any questions?
 
