@@ -29,8 +29,6 @@ header-includes:
 
 - What was the hardest part?
 
-Emoji check \think \monocle \upside
-
 # Questions
 
 - What is convolution?
