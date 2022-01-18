@@ -13,8 +13,8 @@ Schedule (links provided only to semi-finished materials):
 - [Regularization + Assignment 5,6](06-regularization/handout.pdf)
 - [Optimizers + Assignment 6,7](07-optimizers/handout.pdf)
 - [CNN + Assignment 7,8](08-cnn/handout.pdf)
-- [Methodology, Representation + Assignment 8,9](10-misc/handout.pdf)
-- TODO
+- [RNN + Assignment 8,9](09-rnn/handout.pdf)
+- [Methodology, Representation + Assignment 9,10](10-misc/handout.pdf)
 
 ## Contributing
 
