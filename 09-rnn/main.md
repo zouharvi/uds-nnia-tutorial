@@ -27,7 +27,8 @@ header-includes:
 
 # Assignment 8
 
-TODO
+- What was the hardest part?
+- Who wants to present?
 
 # Recurrent Neural Networks
 
@@ -52,12 +53,11 @@ TODO
 ## PyTorch pecularities
 - You can't have a "ragged tensor"
 - All sequences in a batch must be _padded_ to the same length
+  - If you do that, make sure to mask the padded elements
+  - Alternative is gradient accumulation (effective batch size of 1)
 
 # Assignment 9
 
+- Czech diacritization
 - Start early
 - Any questions?
-
-# Resources
-
-TODO

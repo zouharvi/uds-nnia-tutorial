@@ -8,7 +8,7 @@ AT = argv[1]
 
 def safe_float(x):
     if len(x) == 0:
-        return None
+        return 0
     else:
         return float(x)
 
@@ -25,8 +25,13 @@ with open("misc/grading.csv", "r") as f:
         {k:safe_float(x) for k,x in line.items()}
         for line in data
     ]
+    # data = [
+    #     {**line, "PERC": line["PERC"]*float(AT)/10}
+    #     for line in data
+    # ]
 
-data = sorted(data, key=lambda x: x["A"+AT])
+# data = sorted(data, key=lambda x: x["A"+AT])
+data = sorted(data, key=lambda x: x["PERC"])
 x_ticks = list(range(len(data)))
 ax1 = plt.gca()
 ax2 = ax1.twinx()
