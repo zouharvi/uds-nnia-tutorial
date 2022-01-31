@@ -14,7 +14,8 @@ Schedule (links provided only to semi-finished materials):
 - [Optimizers + Assignment 6,7](07-optimizers/handout.pdf)
 - [CNN + Assignment 7,8](08-cnn/handout.pdf)
 - [RNN + Assignment 8,9](09-rnn/handout.pdf)
-- [Methodology, Representation + Assignment 9,10](10-misc/handout.pdf)
+- [Methodology, Representation + Assignment 9,10](10-representation/handout.pdf)
+- [Contemporary NLP + Assignment 10](11-contemporary-nlp/handout.pdf)
 
 ## Contributing
 
