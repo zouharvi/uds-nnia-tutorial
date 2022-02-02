@@ -1,6 +1,6 @@
 # UdS NNIA Tutorials
 
-Slides for Neural Networks Implementation and Application tutorials of Winter 2021 at University of Saarland.
+Slides for Neural Networks Implementation and Application tutorials of Winter semester 2021 at University of Saarland.
 
 ## Outline
 
@@ -14,8 +14,8 @@ Schedule (links provided only to semi-finished materials):
 - [Optimizers + Assignment 6,7](07-optimizers/handout.pdf)
 - [CNN + Assignment 7,8](08-cnn/handout.pdf)
 - [RNN + Assignment 8,9](09-rnn/handout.pdf)
-- [Methodology, Representation + Assignment 9,10](10-representation/handout.pdf)
-- [Contemporary NLP + Assignment 10](11-contemporary-nlp/handout.pdf)
+- [Methodology, Representation + Assignment 9,10 (no content)](10-representation/handout.pdf)
+- [Contemporary NLP + Assignment 10 (no content)](11-contemporary-nlp/handout.pdf)
 
 ## Contributing
 
