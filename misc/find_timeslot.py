@@ -3,7 +3,8 @@
 """
 TODO: documentation
 
-Based on a version for SNLP https://github.com/zouharvi/uds-snlp-tutorial/blob/main/misc/find_timeslot.py
+Based on a version for SNLP
+https://github.com/zouharvi/uds-snlp-tutorial/blob/main/misc/find_timeslot.py
 """
 
 import re
@@ -47,8 +48,8 @@ parser.add_argument('-b', '--balance',
 
 args = parser.parse_args()
 
-slot_mapping = defaultdict(lambda: set())
-student_slots = defaultdict(lambda: set())
+slot_mapping = defaultdict(set)
+student_slots = defaultdict(set)
 student_names = set()
 data_loss = defaultdict(lambda: [])
 header_times = {}
@@ -104,7 +105,7 @@ for slot_ids in itertools.product(*slot_mapping):
         covered_students = covered_students.union(student_slots[slot_id])
 
     loss = len(student_names) - len(covered_students)
-    data_loss[loss].append({k: v for k, v in slot_ids})
+    data_loss[loss].append(dict(slot_ids))
 
 print("Total students:", len(student_names), "\n")
 
@@ -115,7 +116,8 @@ for loss_i, loss in enumerate(sorted(list(data_loss.keys()))[:2]):
     for config_i, config in enumerate(data_loss[loss]):
         print(f"{config_i} -")
         for name, slot_id in config.items():
-            print(f"{name+f' ({len(student_slots[slot_id])})'+':':>14}", header_times[slot_id].replace(" -", "-").replace("- ", "-"))
+            print(f"{name+f' ({len(student_slots[slot_id])})'+':':>14}",
+                  header_times[slot_id].replace(" -", "-").replace("- ", "-"))
     print()
 
 if not args.balance:
