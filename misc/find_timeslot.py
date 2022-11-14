@@ -6,11 +6,46 @@ TODO: documentation
 Based on a version for SNLP https://github.com/zouharvi/uds-snlp-tutorial/blob/main/misc/find_timeslot.py
 """
 
+import re
 import sys
 import csv
-from collections import defaultdict, Counter
-import re
+import argparse
 import itertools
+from collections import defaultdict
+
+
+if __name__ != '__main__':
+    sys.exit()
+
+parser = argparse.ArgumentParser(
+                    prog = 'Finder for balanced time slots',
+                    description = ("Description: "
+                                   "Goes through user responses and finds ideal times "
+                                   "Input file is quite peculiar. First column must "
+                                   "contain the names of the students. The rest of "
+                                   "the columns must contain whether the student can "
+                                   "attend the timeslot specified by the colums. "
+                                   "The format of the headers for each time slot "
+                                   "needs to contain the name of the tutor between "
+                                   "parenthesis, e.g. 'Mondays 12:15 (Jacob)'.")
+                )
+
+
+parser.add_argument('filename',
+                    help="CSV file with first column being names and all columns after that being time slots with values of whether they are possible for each student or not")
+parser.add_argument('-y', '--yes',
+                    nargs='+',
+                    default=['Yes', 'May be'],
+                    help="What values are considered a positive response, e.g. 'OK' or 'Yes'; more than one value is possible")
+parser.add_argument('-c', '--cols',
+                    type=int,
+                    default=3,
+                    help="How many columns to use to display names")
+parser.add_argument('-b', '--balance',
+                    action='store_true',
+                    help="Prompts user for a selection and balances selection")
+
+args = parser.parse_args()
 
 slot_mapping = defaultdict(lambda: set())
 student_slots = defaultdict(lambda: set())
@@ -20,6 +55,7 @@ header_times = {}
 
 
 def extract_names(header):
+    """ Extract slot times and names """
     header = header.split(",")[1:]
     header = [re.search(r"(.+)\s*\((.+)\)", x) for x in header]
     header_names = [x.group(2) for x in header]
@@ -32,14 +68,15 @@ def extract_names(header):
         header_times[i] = date
 
 
-# Input: cleaned exported csv file without the header (and without Vilém's vote which can't be removed)
-with open(sys.argv[1], 'r', newline='') as f:
+# Input: cleaned exported csv file without the header
+# (and without Vilém's vote which can't be removed)
+with open(args.filename, 'r', newline='') as f:
     extract_names(next(f))
     reader = csv.reader(f, quotechar='"')
     for line in reader:
 
         name = line[0]
-        slots = ["OK" in x for x in line[1:]]
+        slots = [x in args.yes for x in line[1:]]
         # if sum(slots) < 3:
         #     print("Disregarding")
         #     continue
@@ -75,8 +112,8 @@ print("Total students:", len(student_names), "\n")
 for loss_i, loss in enumerate(sorted(list(data_loss.keys()))[:2]):
     print("Option", chr(loss_i + ord("A")))
     print("Students without a tutorial:", loss)
-    for config in data_loss[loss]:
-        print("-")
+    for config_i, config in enumerate(data_loss[loss]):
+        print(f"{config_i} -")
         for name, slot_id in config.items():
             print(f"{name+f' ({len(student_slots[slot_id])})'+':':>14}", header_times[slot_id].replace(" -", "-").replace("- ", "-"))
     print()
