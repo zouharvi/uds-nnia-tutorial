@@ -117,3 +117,60 @@ for loss_i, loss in enumerate(sorted(list(data_loss.keys()))[:2]):
         for name, slot_id in config.items():
             print(f"{name+f' ({len(student_slots[slot_id])})'+':':>14}", header_times[slot_id].replace(" -", "-").replace("- ", "-"))
     print()
+
+if not args.balance:
+    sys.exit()
+
+# TODO: Fix non-deterministic nature of balancing
+# Automatically balance repeated students for selected option
+# WARNING: A bit of spaghetti code ahead as to not modify
+#          the original script too much
+selected = input("Select option to balance in LetterNumber format, e.g. (A2): ")
+
+if len(selected) != 2 or not selected[0].isalpha() or not selected[1].isnumeric():
+    sys.exit("Bad selection")
+
+# Since we're not displaying them in the order we fill it out we need
+# some processing of the selection
+selected_loss = ord(selected[0]) - ord('A')
+selected_loss = sorted(list(data_loss.keys()))[selected_loss]
+selected_config = data_loss[selected_loss][int(selected[1])]
+
+# Create a new dictionary with final slots
+final_slots = defaultdict(list)
+
+# Create auxiliar data structures for balancing
+config_slots = list(selected_config.values())
+
+# Iterate over names, when repeated names are found:
+# Assign each to the slot with the least amount of students
+# while only taking into account possible slots for the student
+for student_name in student_names:
+    student_possible_slots = [x for x in config_slots
+                              if student_name in student_slots[x]]
+
+    # Ignore students we couldn't accommodate :(
+    if len(student_possible_slots) < 1:
+        continue
+
+    min_length = len(final_slots[student_possible_slots[0]])
+    selected_slot = student_possible_slots[0]
+    for temp_slot_id, name_list in final_slots.items():
+        # Ignore slots that aren't suitable
+        if temp_slot_id not in student_possible_slots:
+            continue
+
+        if len(name_list) < min_length:
+            min_length = len(name_list)
+            selected_slot = temp_slot_id
+
+    # Add name to final slots for final display
+    final_slots[selected_slot].append(student_name)
+
+# Print final slots with student names in 3 columns
+for name, slot_id in selected_config.items():
+    print()
+    print(f"{name+f' ({len(final_slots[slot_id])})'+':'}",
+          header_times[slot_id].replace(" -", "-").replace("- ", "-"))
+    for i in range(0, len(final_slots[slot_id]), args.cols):
+        print(' '.join(f"-- {s:25}" for s in final_slots[slot_id][i:i+args.cols]))
